@@ -1,12 +1,392 @@
----
-title: Welcome to Middleman
----
-
--content = data.remove_middleman_init_content
-
-.welcome
-  .logo
-    = image_tag content.image
-  %h1= content.heading
-  %p.doc
-    = link_to content.link.text, content.link.url, target: '_blank'
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header.page-scroll
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#page-top"} Mice on Fire
+    / Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.hidden
+          %a{:href => "#page-top"}
+        %li.page-scroll
+          %a{:href => "#portfolio"} Portfolio
+        %li.page-scroll
+          %a{:href => "#about"} About
+        %li.page-scroll
+          %a{:href => "#contact"} Contact
+        .btn-group
+          %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+            On the Web
+            %span.caret
+          %ul.dropdown-menu{"aria-labelledby" => "menu1", :role => "menu"}
+            %li{:role => "presentation"}
+              %a{:href => "https://www.facebook.com/pages/Mice-On-Fire/602962163065825?fref=ts", :role => "menuitem", :tabindex => "-1", :title => "Go like it. Please? ):"} Facebook
+            %li{:role => "presentation"}
+              %a{:href => "https://www.behance.net/miceonfire", :role => "menuitem", :tabindex => "-1"} Behance
+            %li{:role => "presentation"}
+              %a{:href => "https://github.com/MiceOnFire", :role => "menuitem", :tabindex => "-1"} GitHub
+            %li{:role => "presentation"}
+              %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Stack Overflow
+        .btn-group.open
+          %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+            Friends
+            %span.caret
+          %ul.dropdown-menu{"aria-labelledby" => "menu2", :role => "menu"}
+            %li.dropdown-header{:role => "presentation"} I did not do their design/development.
+            %li{:role => "presentation"}
+              %a{:href => "http://www.limocincinnati.net/", :role => "menuitem", :tabindex => "-1"} Cincinnati Party Bus
+            %li{:role => "presentation"}
+              %a{:href => "http://www.wellerrusticdesign.com/", :role => "menuitem", :tabindex => "-1"} weller Rustic Design
+    / /.navbar-collapse
+  / /.container-fluid
+/ Header
+%header
+  .container
+    .row
+      .col-lg-12
+        .profile
+          %img.img-responsive{:alt => "", :src => "images/profile.png"}/
+        .intro-text
+          %span.name Mice on Fire
+          %hr.glyphicon.glyphicon-tree-conifer/
+          %span.skills
+            Cody Smith
+            %br>/
+            Web Developer - Graphic Artist - Cat
+/ Portfolio Grid Section
+%section#portfolio
+  .container
+    .row
+      .col-lg-12.text-center
+        %h22 Portfolio
+        %hr.glyphicon.glyphicon-tree-conifer/
+    .row
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/Caidynssmall.png"}/
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/mcgeeweddingsmall.png"}/
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal3"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/wellersmall.png"}/
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal4"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/bethelsmall.png"}/
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal5"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/bridalshowersmall.png"}/
+      .col-sm-4.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal6"}
+          .caption
+            .caption-content
+              %i.fa.fa-search-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => "images/portfolio/invitationssmall.png"}/
+/ About Section
+%section#about.success
+  .container
+    .row
+      .col-lg-12.text-center
+        %h7 About
+        %hr.glyphicon.glyphicon-tree-conifer/
+    .row
+      .col-lg-4.col-lg-offset-2
+        %p Hey, I'm Cody. I'm a freelance Designer and Web Developer that is proficient in the Adobe Suite as well as HTML5 and CSS. I attended the University of Cincinnati and have been freelancing for 4 years.
+      .col-lg-4
+        %p
+          I made this site with Bootstrap, HTML5, and CSS. If you want more information or want a free consultation with mock-ups you can use the
+          %a{:href => "#contact"} contact
+          form or you can
+          %a{:href => "mailto:cody@miceonfire.com"} email me!
+      .col-lg-8.col-lg-offset-2.text-center
+/ Contact Section
+%section#contact
+  .container
+    .row
+      .col-lg-12.text-center
+        %h22 Contact Me
+        %hr.glyphicon.glyphicon-tree-conifer/
+    .row
+      .col-lg-8.col-lg-offset-2
+        / To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+        / The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+        .formback
+          %form#contactForm{:name => "sentMessage", :novalidate => ""}
+            .row.control-group
+              .form-group.col-xs-12.floating-label-form-group.controls
+                %label Name
+                %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Name", :required => "", :type => "text"}/
+                %p.help-block.text-danger
+            .row.control-group
+              .form-group.col-xs-12.floating-label-form-group.controls
+                %label Email Address
+                %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Email Address", :required => "", :type => "email"}/
+                %p.help-block.text-danger
+            .row.control-group
+              .form-group.col-xs-12.floating-label-form-group.controls
+                %label Phone Number
+                %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Phone Number", :required => "", :type => "tel"}/
+                %p.help-block.text-danger
+            .row.control-group
+              .form-group.col-xs-12.floating-label-form-group.controls
+                %label Message
+                %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Message", :required => "", :rows => "5"}
+                %p.help-block.text-danger
+            %br/
+            #success
+            .row
+              .form-group.col-xs-12
+                %button.btn.btn-success.btn-lg{:type => "submit"} Send
+/ Footer
+%footer.text-center
+  .footer-above
+    .container
+      .row
+        .footer-col.col-md-4
+          %h3 Location
+          %p Cincinnati, OH, 45246
+        .footer-col.col-md-4
+          %h3 Around the Web
+          %ul.list-inline
+            %li
+              %a.btn-social.btn-outline{:href => "https://www.facebook.com/pages/Mice-On-Fire/602962163065825"}
+                %i.fa.fa-fw.fa-facebook
+            %li
+              %a.btn-social.btn-outline{:href => "http://www.linkedin.com/pub/cody-smith/6b/ba4/550"}
+                %i.fa.fa-fw.fa-linkedin
+            %li
+              %a.btn-social.btn-outline{:href => "https://dribbble.com/MiceonFire"}
+                %i.fa.fa-fw.fa-dribbble
+        .footer-col.col-md-4
+          %h3 About Freelancer
+          %p
+            Freelance is a free to use, open source Bootstrap theme created by
+            = succeed "." do
+              %a{:href => "http://startbootstrap.com"} Start Bootstrap
+  .footer-below
+    .container
+      .row
+        .col-lg-12
+          %p Copyright © MiceOnFire 2014
+          %p Mice so fast its on fire - Like, a computer mouse. Get it?
+/ Scroll to Top Button (Only visible on small and extra-small screen sizes)
+.scroll-top.page-scroll.visible-xs.visble-sm
+  %a.btn.btn-primary{:href => "#page-top"}
+    %i.fa.fa-chevron-up
+/ Portfolio Modals
+#portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 Caidyn's Birthday
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/Caidyns invitations 2-01.png"}/
+            %p I made these invitations for a client of mine who wanted to do a Sophia themed birthday.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  Gabrielle Bourne
+              %li
+                Date:
+                %strong
+                  September 2014
+              %li
+                Service:
+                %strong
+                  Photoshop, Illustrator
+              %li
+                Testimonial:
+                %strong "These are exactly what I had in mind, he did them fast and knew exactly what I wanted!"
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+#portfolioModal2.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 McGee Wedding
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/mcgeewedding.png"}/
+            %p I made this for a client who showed me some samples of brackets she wanted with an overall style and personalized one for her.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  McGee Wedding
+              %li
+                Date:
+                %strong
+                  May 2014
+              %li
+                Service:
+                %strong
+                  Illustrator
+              %li
+                Testimonial:
+                %strong "I had a few ideas in mind and explained what I wanted. He put it together perfectly, matched my wedding colours and even added a cute little dragonfly. I love them."
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+#portfolioModal3.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 Weller Rustic Design Logo
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/RWDmock.png"}/
+            %p A logo I did for a home design business. I made some sketches, and showed the client my ideas. He said he wanted a rustic, yet simple look.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  Weller Rustic Design
+              %li
+                Date:
+                %strong
+                  February 2015
+              %li
+                Service:
+                %strong
+                  Illustrator, Photoshop
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+#portfolioModal4.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 Bethel Floral Boutique
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/bethel.png"}/
+            %p A logo for a florist shop that I made by sketching a few logos and I made mock ups to come up with the best design.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  %a{:href => "https://www.facebook.com/pages/Bethel-Floral-Boutique/110726118963919"} Bethel Floral Boutique
+              %li
+                Date:
+                %strong
+                  February 2014
+              %li
+                Service:
+                %strong
+                  Illustrator
+              %li
+                Testimonial:
+                %strong "We had some ideas about how we wanted our new logo. Cody showed us a few examples and his logo grew to exactly what we wanted!"
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+#portfolioModal5.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 Bridal Shower
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/bridalshower.png"}/
+            %p Bridal Shower Invitations I made for a client who wanted flat flowers with chevron. I sketched up a few ideas and made what they liked best.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  Bridal Party
+              %li
+                Date:
+                %strong
+                  August 2013
+              %li
+                Service:
+                %strong
+                  Illustrator
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+#portfolioModal6.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            %h2 Smith Wedding
+            %hr.glyphicon.glyphicon-tree-conifer/
+            %img.img-responsive.img-centered{:alt => "", :src => "images/portfolio/w12.jpg"}/
+            %p A lovely Bride and Groom had me make them a wedding package that included Invitations, RSVP cards, Dress Cards, Map to the wedding and other various items.
+            %ul.list-inline.item-details
+              %li
+                Client:
+                %strong
+                  The Smiths
+              %li
+                Date:
+                %strong
+                  May-July 2013
+              %li
+                Service:
+                %strong
+                  Illustrator, Photoshop
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times
+              Close
+/ jQuery Version 1.11.0
+%script{:src => "js/jquery-1.11.0.js"}
+/ Bootstrap Core JavaScript
+%script{:src => "js/bootstrap.min.js"}
+/ Plugin JavaScript
+%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
+%script{:src => "js/classie.js"}
+%script{:src => "js/cbpAnimatedHeader.js"}
+/ Contact Form JavaScript
+%script{:src => "js/jqBootstrapValidation.js"}
+%script{:src => "js/contact_me.js"}
+/ Custom Theme JavaScript
+%script{:src => "js/freelancer.js"}
