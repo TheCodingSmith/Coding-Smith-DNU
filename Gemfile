@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
+
+gem 'middleman', '~>4.0.0'
+gem 'puma'
+
 gem 'nokogiri'
 gem 'rack', '~>1.1'
-gem 'rspec', :require => 'spec'
-gem 'ruby', '2.2.4'
