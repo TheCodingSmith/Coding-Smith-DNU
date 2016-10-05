@@ -19,6 +19,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    commonjs (0.2.7)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (0.9.2)
@@ -36,6 +37,9 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.9.0)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    libv8 (3.16.14.15)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
@@ -88,7 +92,11 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    ref (2.0.0)
     sass (3.4.21)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -104,10 +112,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  less
   middleman (~> 4.0.0)
   nokogiri
   puma
   rack (~> 1.1)
+  therubyracer
 
 RUBY VERSION
    ruby 2.3.0p0

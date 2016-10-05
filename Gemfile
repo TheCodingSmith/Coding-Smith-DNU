@@ -6,3 +6,5 @@ gem 'puma'
 
 gem 'nokogiri'
 gem 'rack', '~>1.1'
+gem 'less'
+gem 'therubyracer'
